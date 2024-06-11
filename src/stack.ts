@@ -48,7 +48,7 @@ class Stack<T> {
 }
 
 // Ejemplo de uso
-const Stack = new Stack<number>();
+const stack = new Stack<number>();
 
 stack.push(10);
 stack.push(20);
