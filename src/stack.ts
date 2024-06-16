@@ -1,5 +1,5 @@
 class Stack<T> {
-    private items: T[];
+    private items: T[]; // Aquí se almacenan los elementos de la pila
 
     constructor() {
         this.items = [];
@@ -12,17 +12,11 @@ class Stack<T> {
 
     // Método para eliminar y devolver el elemento superior de la pila
     pop(): T | undefined {
-        if (this.isEmpty()) {
-            return undefined;
-        }
         return this.items.pop();
     }
 
     // Método para devolver el elemento superior de la pila sin eliminarlo
     peek(): T | undefined {
-        if (this.isEmpty()) {
-            return undefined;
-        }
         return this.items[this.items.length - 1];
     }
 
@@ -48,26 +42,26 @@ class Stack<T> {
 }
 
 // Ejemplo de uso
-const stack = new Stack<number>();
+const numberStack = new Stack<number>(); // Pila para números
 
-stack.push(10);
-stack.push(20);
-stack.push(30);
+numberStack.push(10);
+numberStack.push(20);
+numberStack.push(30);
 
 console.log('Pila después de agregar elementos:');
-stack.print();
+numberStack.print();
 
-console.log('Elemento superior:', stack.peek());
+console.log('Elemento superior:', numberStack.peek());
 
-console.log('Eliminar elemento superior:', stack.pop());
+console.log('Eliminar elemento superior:', numberStack.pop());
 
 console.log('Pila después de eliminar el elemento superior:');
-stack.print();
+numberStack.print();
 
-console.log('Tamaño de la pila:', stack.size());
+console.log('Tamaño de la pila:', numberStack.size());
 
-stack.clear();
+numberStack.clear();
 
 console.log('Pila después de vaciarla:');
-stack.print();
-console.log('¿La pila está vacía?', stack.isEmpty());
+numberStack.print();
+console.log('¿La pila está vacía?', numberStack.isEmpty());
